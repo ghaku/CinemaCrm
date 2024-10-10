@@ -20,29 +20,41 @@ class HallController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'capacity' => 'required|integer',
+        ]);
         Hall::create($request->all());
-        return redirect()->route('halls.index');
+        return redirect()->route('halls.index')->with('success', 'Hall created successfully.');
     }
 
-    public function show(Hall $hall)
+    public function show($id)
     {
+        $hall = Hall::findOrFail($id);
         return view('halls.show', compact('hall'));
     }
 
-    public function edit(Hall $hall)
+    public function edit($id)
     {
+        $hall = Hall::findOrFail($id);
         return view('halls.edit', compact('hall'));
     }
 
-    public function update(Request $request, Hall $hall)
+    public function update(Request $request, $id)
     {
+        $request->validate([
+            'name' => 'required',
+            'capacity' => 'required|integer',
+        ]);
+        $hall = Hall::findOrFail($id);
         $hall->update($request->all());
-        return redirect()->route('halls.index');
+        return redirect()->route('halls.index')->with('success', 'Hall updated successfully.');
     }
 
-    public function destroy(Hall $hall)
+    public function destroy($id)
     {
+        $hall = Hall::findOrFail($id);
         $hall->delete();
-        return redirect()->route('halls.index');
+        return redirect()->route('halls.index')->with('success', 'Hall deleted successfully.');
     }
 }
