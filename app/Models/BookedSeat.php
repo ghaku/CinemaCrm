@@ -17,4 +17,10 @@ class BookedSeat extends Model
     {
         return $this->belongsTo(Seat::class);
     }
+    
+    // public function showtime()
+    // {
+    //     return $this->belongsTo(Showtime::class);
+    // }
+    
 }

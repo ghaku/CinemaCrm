@@ -17,4 +17,5 @@ class Seat extends Model
     {
         return $this->hasMany(BookedSeat::class);
     }
+    
 }

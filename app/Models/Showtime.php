@@ -22,4 +22,10 @@ class Showtime extends Model
     {
         return $this->hasMany(Booking::class);
     }
+
+    public function bookedSeats()
+    {
+        return $this->hasMany(BookedSeat::class);
+    }
+
 }
