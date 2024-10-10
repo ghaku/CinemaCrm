@@ -105,78 +105,21 @@ table tr:hover {
     background-color: #e9ecef;
 }
 
-/* Стиль для кнопки Видалення (Delete) */
-.btn-danger {
-    background-color: #dc3545;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-danger:hover {
-    background-color: #c82333;
-}
-
-/* Стиль для кнопки Перегляду (View) */
-.btn-view {
-    background-color: #17a2b8;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-view:hover {
-    background-color: #138496;
-}
-
-/* Стиль для кнопки Редагування (Edit) */
-.btn-edit {
-    background-color: #ffc107;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-edit:hover {
-    background-color: #e0a800;
-}
-
-/* Стиль для кнопки Додавання (Add) */
-.btn-add {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-add:hover {
-    background-color: #218838;
-}
-
-/* Загальні стилі для всіх кнопок */
+/* Buttons */
 button {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
     font-size: 16px;
-    text-transform: uppercase;
-    margin: 10px;
+    margin-top: 10px;
 }
 
-button:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+button:hover {
+    background-color: #495057;
+    transition: background-color 0.3s ease;
 }
-
 
 /* Forms */
 form {
