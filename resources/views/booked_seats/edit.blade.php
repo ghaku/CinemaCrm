@@ -7,7 +7,6 @@
         @csrf
         @method('PUT')
 
-        <!-- Select Booking -->
         <label for="booking">Select Booking:</label>
         <select name="booking_id" id="booking">
             @foreach($bookings as $booking)
@@ -17,7 +16,6 @@
             @endforeach
         </select>
 
-        <!-- Select Seat -->
         <label for="seat">Select Seat:</label>
         <select name="seat_id" id="seat">
             @foreach($availableSeats as $seat)
@@ -34,7 +32,6 @@
         document.getElementById('booking').addEventListener('change', function() {
             var bookingId = this.value;
 
-            // AJAX request to get available seats for the selected booking's showtime
             fetch(`/bookings/${bookingId}/available-seats`)
                 .then(response => response.json())
                 .then(data => {

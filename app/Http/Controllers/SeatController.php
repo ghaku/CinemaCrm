@@ -18,7 +18,7 @@ class SeatController extends Controller
 
     public function create()
     {
-        $halls = Hall::all(); // Fetch all halls
+        $halls = Hall::all(); 
         return view('seats.create', compact('halls'));
     }
 
@@ -42,7 +42,7 @@ class SeatController extends Controller
     public function edit($id)
     {
         $seat = Seat::findOrFail($id);
-        $halls = Hall::all(); // Fetch all halls for editing
+        $halls = Hall::all(); 
         return view('seats.edit', compact('seat', 'halls'));
     }
 
@@ -69,11 +69,9 @@ class SeatController extends Controller
     {
         $showtime_id = $request->query('showtime_id');
 
-        // Get the hall for the showtime
         $showtime = Showtime::findOrFail($showtime_id);
         $hall_id = $showtime->hall_id;
 
-        // Get all seats in the hall
         $availableSeats = Seat::where('hall_id', $hall_id)
             ->whereDoesntHave('bookedSeats', function ($query) use ($showtime_id) {
                 $query->whereHas('booking', function ($query) use ($showtime_id) {

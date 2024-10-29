@@ -75,7 +75,6 @@ class ShowtimeController extends Controller
         $showtime = Showtime::findOrFail($showtimeId);
         $hallId = $showtime->hall_id;
 
-        // Assuming seats are stored in a `seats` table
         $availableSeats = Seat::where('hall_id', $hallId)
             ->whereNotIn('id', function ($query) use ($showtimeId) {
                 $query->select('seat_id')

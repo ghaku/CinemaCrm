@@ -24,7 +24,7 @@
                 <tr>
                     <td>{{ $bookedSeat->seat->seatNumber }}</td>
                     <td>{{ ucfirst($bookedSeat->seat->type) }}</td>
-                    <td>{{ $bookedSeat->seat->hall->name }}</td> <!-- Assuming the hall relationship is set -->
+                    <td>{{ $bookedSeat->seat->hall->name }}</td> 
                     <td>{{ $bookedSeat->booking_id }}</td>
                     <td>
                         <a href="{{ route('booked_seats.show', $bookedSeat->id) }}" class="btn btn-info">View</a>

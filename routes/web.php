@@ -21,5 +21,4 @@ Route::resource('bookings', BookingController::class);
 Route::resource('seats', SeatController::class);
 Route::resource('booked_seats', BookedSeatController::class);
 
-// Available seats under showtimes
 Route::get('showtimes/{id}/available-seats', [BookingController::class, 'getAvailableSeats']);
