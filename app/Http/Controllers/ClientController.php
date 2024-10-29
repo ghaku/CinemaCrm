@@ -9,10 +9,8 @@ class ClientController extends Controller
 {
     public function index()
     {
-        // Get all clients from the database
         $clients = Client::all();
 
-        // Return the view with clients
         return view('clients.index', compact('clients'));
     }
 

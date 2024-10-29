@@ -41,7 +41,6 @@
         document.getElementById('showtime').addEventListener('change', function() {
             var showtimeId = this.value;
 
-            // AJAX request to get available seats for the selected showtime
             fetch(`/showtimes/${showtimeId}/available-seats`)
                 .then(response => response.json())
                 .then(data => {

@@ -105,7 +105,7 @@ table tr:hover {
     background-color: #e9ecef;
 }
 
-/* Стиль для кнопки Видалення (Delete) */
+/* Стиль для кнопки Видалення */
 .btn-danger {
     background-color: #dc3545;
     color: white;
@@ -120,7 +120,7 @@ table tr:hover {
     background-color: #c82333;
 }
 
-/* Стиль для кнопки Перегляду (View) */
+/* Стиль для кнопки Перегляду */
 .btn-view {
     background-color: #17a2b8;
     color: white;
@@ -135,7 +135,7 @@ table tr:hover {
     background-color: #138496;
 }
 
-/* Стиль для кнопки Редагування (Edit) */
+/* Стиль для кнопки Редагування */
 .btn-edit {
     background-color: #ffc107;
     color: white;
@@ -150,7 +150,7 @@ table tr:hover {
     background-color: #e0a800;
 }
 
-/* Стиль для кнопки Додавання (Add) */
+/* Стиль для кнопки Додавання */
 .btn-add {
     background-color: #28a745;
     color: white;

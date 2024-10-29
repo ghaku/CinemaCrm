@@ -48,8 +48,8 @@
                     url: '/showtimes/' + showtimeId + '/available-seats',
                     type: 'GET',
                     success: function(data) {
-                        $('#seat_id').empty(); // Clear the seat options
-                        $('#seat_id').append('<option value="">Select Seat</option>'); // Add default option
+                        $('#seat_id').empty(); 
+                        $('#seat_id').append('<option value="">Select Seat</option>'); 
                         $.each(data, function(index, seat) {
                             $('#seat_id').append('<option value="' + seat.id + '">' + seat.number + '</option>');
                         });
@@ -59,8 +59,8 @@
                     }
                 });
             } else {
-                $('#seat_id').empty(); // Clear seat options if no showtime is selected
-                $('#seat_id').append('<option value="">Select Seat</option>'); // Add default option
+                $('#seat_id').empty();
+                $('#seat_id').append('<option value="">Select Seat</option>'); 
             }
         });
     });

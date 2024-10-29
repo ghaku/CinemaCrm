@@ -23,7 +23,7 @@
                 <tr>
                     <td>{{ $seat->seatNumber }}</td>
                     <td>{{ ucfirst($seat->type) }}</td>
-                    <td>{{ $seat->hall->name }}</td> <!-- Assuming the hall relationship is set -->
+                    <td>{{ $seat->hall->name }}</td> 
                     <td>
                         <a href="{{ route('seats.show', $seat->id) }}" class="btn btn-info">View</a>
                         <a href="{{ route('seats.edit', $seat->id) }}" class="btn btn-warning">Edit</a>

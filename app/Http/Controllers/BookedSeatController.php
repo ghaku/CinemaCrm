@@ -20,7 +20,7 @@ class BookedSeatController extends Controller
     public function create()
     {
         $seats = Seat::all(); 
-        return view('booked_seats.create', compact('seats')); // Pass seats to the view
+        return view('booked_seats.create', compact('seats')); 
     }
 
     public function store(Request $request)
@@ -44,9 +44,9 @@ class BookedSeatController extends Controller
         $bookedSeat = BookedSeat::findOrFail($id);
         $clients = Client::all();
         $showtimes = Showtime::all();
-        $availableSeats = Seat::where('hall_id', $bookedSeat->booking->showtime->hall_id)->get(); // Make sure this is correct
+        $availableSeats = Seat::where('hall_id', $bookedSeat->booking->showtime->hall_id)->get(); 
     
-        // Retrieve all bookings for the dropdown
+    
         $bookings = Booking::all();
     
         return view('booked_seats.edit', compact('bookedSeat', 'clients', 'showtimes', 'availableSeats', 'bookings'));

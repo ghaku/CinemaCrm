@@ -16,13 +16,9 @@
         <div class="form-group">
             <label for="genre">Genre</label>
             <select name="genre" class="form-control" required>
-                <option value="comedy">Comedy</option>
-                <option value="fantasy">Fantasy</option>
-                <option value="horror">Horror</option>
-                <option value="action">Action</option>
-                <option value="melodrama">Melodrama</option>
-                <option value="mystic">Mystic</option>
-                <option value="detective">Detective</option>
+                @foreach($genres as $genre)
+                    <option value="{{ $genre }}">{{ ucfirst($genre) }}</option>
+                @endforeach
             </select>
         </div>
         <div class="form-group">
